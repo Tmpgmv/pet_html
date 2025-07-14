@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="auto">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Astro v5.9.2">
+    <title>Pricing example · Bootstrap v5.3</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/pricing/">    
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="img/favicon.ico">
+    <meta name="theme-color" content="#712cf9">
+    <link href="css/pricing.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+    <style>
+        .bd-placeholder-img{font-size:1.125rem;text-anchor:middle;-webkit-user-select:none;-moz-user-select:none;user-select:none}@media (min-width: 768px){.bd-placeholder-img-lg{font-size:3.5rem}}.b-example-divider{width:100%;height:3rem;background-color:#0000001a;border:solid rgba(0,0,0,.15);border-width:1px 0;box-shadow:inset 0 .5em 1.5em #0000001a,inset 0 .125em .5em #00000026}.b-example-vr{flex-shrink:0;width:1.5rem;height:100vh}.bi{vertical-align:-.125em;fill:currentColor}.nav-scroller{position:relative;z-index:2;height:2.75rem;overflow-y:hidden}.nav-scroller .nav{display:flex;flex-wrap:nowrap;padding-bottom:1rem;margin-top:-1px;overflow-x:auto;text-align:center;white-space:nowrap;-webkit-overflow-scrolling:touch}.btn-bd-primary{--bd-violet-bg: #712cf9;--bd-violet-rgb: 112.520718, 44.062154, 249.437846;--bs-btn-font-weight: 600;--bs-btn-color: var(--bs-white);--bs-btn-bg: var(--bd-violet-bg);--bs-btn-border-color: var(--bd-violet-bg);--bs-btn-hover-color: var(--bs-white);--bs-btn-hover-bg: #6528e0;--bs-btn-hover-border-color: #6528e0;--bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);--bs-btn-active-color: var(--bs-btn-hover-color);--bs-btn-active-bg: #5a23c8;--bs-btn-active-border-color: #5a23c8}.bd-mode-toggle{z-index:1500}.bd-mode-toggle .bi{width:1em;height:1em}.bd-mode-toggle .dropdown-menu .active .bi{display:block!important}
+    </style>
+</head>
+
+<body>
+    <div class="container py-3">
+        <header>
+            <div class="d-flex flex-column flex-md-row align-items-center pb-3 mb-4 border-bottom">
+                <a href="/" class="d-flex align-items-center link-body-emphasis text-decoration-none">
+                <img src="img/cat.svg" height=32 alt="cat"><span class="fs-4 text-primary ms-2">Найди питомца</span> </a>
+                <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto"> 					
+					<a class="py-2 link-body-emphasis text-decoration-none ps-3 pe-3" href="#"><img src="img/application.svg" height=20 alt="application"></a> 
+					<a class="py-2 link-body-emphasis text-decoration-none ps-3 pe-3" href="#"><img src="img/search.svg" height=20 alt="search"></a>
+					<a class="py-2 link-body-emphasis text-decoration-none ps-3 pe-3" href="#"><img src="img/account.svg" height=20 alt="person"></a> 
+					<a class="py-2 link-body-emphasis text-decoration-none ps-3 pe-3" href="#"><img src="img/login.svg" height=20 alt="login"></a> 
+				</nav>
+            </div>
+        </header>
+<main>
+	
+	 <section id="registration-section" class="mt-5">
+		<h1 class="text-center  line-hight-08">Регистрация</h1>   
+		
+		<form id="registration-form" method="post" class="row g-3 mt-2 col-12 col-md-6 mx-auto">  
+		    <div>
+				<label for="validationServerName" class="form-label">Имя (кириллица, пробел, дефис)</label>
+				    <input type="text" class="form-control is-invalid" id="validationServerName" aria-describedby="nameError" name="name" pattern="[А-Яа-яЁё\s\-]+"  required>
+				<div id="nameError" class="invalid-feedback">
+					Введите корректное имя.
+				</div>
+			</div>
+			
+			<div>
+				<label for="validationServerPhone" class="form-label">Телефон (цифры, может начинаться со знака +)</label>
+				<input type="tel" class="form-control is-invalid" 
+				id="validationServerPhone" 				
+				aria-describedby="phoneError" name="phone" pattern="^\+?\d+$" required>
+				<div id="phoneError" class="invalid-feedback">
+					Введите корректный телефон.
+				</div>
+			</div>
+			
+			<div>
+				<label for="validationServerEmail" class="form-label">Электронная почта</label>
+				<input type="email" class="form-control is-invalid" id="validationServerEmail" aria-describedby="emailError" name="email" required>
+				<div id="emailError" class="invalid-feedback">
+				  Адрес электронной почты уже занят.
+				</div>
+			</div>
+
+			  <div>
+				<label for="validationServerPassword" class="form-label">Пароль (не менее 7 символов, обязательно: 1 цифра, 1 строчная, 1 заглавная буквы)</label>
+				<input type="password" class="form-control is-invalid" id="validationServerPassword" aria-describedby="passwordError" name="password" pattern="(?=.*\d)(?=.*[a-zа-яё])(?=.*[A-ZА-ЯЁ]).{7,}"  required>
+				<div id="passwordError" class="invalid-feedback">
+				  Введите корректный пароль.
+				</div>
+			  </div>
+			
+			  <div>
+				<label for="validationServerPasswordConfirmation" class="form-label">Повтор пароля</label>
+				<input type="password" class="form-control is-invalid" id="validationServerPasswordConfirmation" aria-describedby="passwordConfirmationError" name="passwordConfirmation" required>
+				<div id="passwordConfirmationError" class="invalid-feedback">
+				  Пароли не совпадают.
+				</div>
+			  </div>  
+			  
+  <div>
+ <div class="form-check">
+   <input class="form-check-input" type="checkbox" value="" id="validationServerConfirm" aria-describedby="confirmError" name="confirm" required>
+   <label class="form-check-label" for="validationServerConfirm">
+  Согласие на обработку персональных данных.
+   </label>
+   <div id="confirmError" class="invalid-feedback">
+  Необходимо согласиться.
+   </div>
+ </div>
+  </div>
+			
+			<div class="col-12">
+				<button class="btn btn-primary" type="submit">Отправить</button>
+			</div>
+		</form>
+		
+	 </section><!-- #registration-section -->
+</main>
+        
+        <footer class="pt-4 my-md-5 pt-md-5 border-top">
+            <div class="row">
+                <div class="col-12 col-md">  <img src="img/cat.svg" height=19 alt="cat"><small class="d-block mb-3 text-body-secondary">&copy; 2017–2025 GET PET BACK</small> </div>
+
+                <div class="col-12 col-md">
+                    <h5>Новости</h5>
+                    <ul class="list-unstyled text-small">
+                        <li class="mb-1">
+							<form id="subscription" method="post">
+								<input type="email" class="form-control is-invalid" id="subscriptionEmail" aria-describedby="emailFeedback" required>
+								<div id="emailFeedback" class="invalid-feedback">
+									Подписка уже оформлена.
+								</div>
+								<button class="btn btn-primary mt-3" type="submit">Подписаться</button>
+							</form>
+						</li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/jquery-3.7.1.min.js"></script>
+</body>
+
+</html>   
